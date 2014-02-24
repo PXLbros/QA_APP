@@ -90,7 +90,9 @@ $types = array
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
+
+<head>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,100' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<title>QA App | PXL BROS</title>
@@ -122,4 +124,5 @@ $types = array
 		<script src="includes/jquery.min.js"></script>
 		<script src="includes/javascript.js"></script>
 	</body>
+
 </html>
