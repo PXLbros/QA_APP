@@ -1,0 +1,248 @@
+/***********************************************************************************************************************
+DOCUMENT: style/format.css
+DEVELOPED BY: Ryan Stemkoski
+COMPANY: Zipline Interactive
+EMAIL: ryan@gozipline.com
+PHONE: 509-321-2849
+DATE: 2/26/2009
+DESCRIPTION: This document contains the structural formatting files for the accordion style menu.
+************************************************************************************************************************/
+body {
+	margin:0;
+	}
+#wrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+/* PROJECT TITLE DIV */
+.projecttitle {
+	width: 100%;
+	height:50px;
+	}
+	
+/* PROJECT TITLE INPUT - SHOULD BECOME NAME OF PROJECT AFTER BEING INPUT */
+.title-input {
+	color:#FFFFFF;
+	width:100%;
+	height:50px;
+	text-align:center;
+	font-size:2.2em;
+	background-color:#00FF8C;
+	padding:0;
+	border: 0px solid #EEC5A9;
+	border-bottom: 2px solid #EEC5A9;
+	}
+	
+/* EVERY SINGLE BUTTON */
+.accordionButton {
+	color:white;	
+	width: 100%;
+	height:50px;
+	border-top: 1px solid #EEC5A9;
+	cursor: pointer;
+	text-align:center;
+	padding-left:0px;
+	}
+	
+/* CONTAINER FOR ACCORDION CONTENT */
+.accordionContent {	
+	width: 100%;
+	background: #B4E6FF;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	padding-top:20px;
+	padding-bottom:20px;
+	}
+	
+/* CONTAINER FOR 3 TEXT INPUT FORMS AND SAVE BUG BUTTON */
+.inputcontainer {
+	width:80%;
+	height:60%;
+	border-bottom: 2px solid #7C7C7C;
+	background: #FFFFFF;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:10px;
+	padding-right:10px;
+	}
+	
+.inputcontainer p {
+	margin:0;
+	line-height:2em;
+	font-size:0.9em;
+	font-weight:bold;
+	}
+	
+/* STYLES THE TEXT-INPUT BOXES */
+.small-input {
+	width:99%;
+	border:none;
+	border-left:2px solid #7C7C7C;
+	background: #F7F7F7;
+	}
+	
+.large-input {
+	width:99%;
+	max-width:99%;
+	min-width:99%;
+	max-height:300px;
+	border:none;
+	border-left: 2px solid #7C7C7C;
+	background: #F7F7F7;
+	padding:1px;
+	}
+	
+/* DIV USED TO POSITION "SAVE BUG" BUTTON */
+.savebuttoncontainer {
+	height:30px;
+	width:33%;
+	max-width:175px;
+	margin:10px auto 0 auto;
+	}
+	
+/* DIV USED TO POSITION "NO MORE BUGS" AND "+ NEW BUG" BUTTONS */
+.bugsbuttoncontainer p {
+	display: inline;
+	font-size: 1.0em;
+	width: 100%;
+	margin-right: 2%;
+	margin-left: 0%;
+}
+
+.bugsbuttoncontainer {
+	height:30px;
+	width:80%;
+	max-width:370px;
+	margin:20px auto 0 auto;
+	}
+
+.nobugsbutton {
+	border:none;
+	border-bottom:2px solid black;
+	border-top:2px solid black;
+	border-radius: 5px;
+	border-radius: 5px;
+	height:100%;
+	background: #F7F7F7;
+	font-size:1.5em;
+	width:46%;
+	margin-right:2%;
+	margin-left:11%;
+	text-decoration:none;
+	}
+
+.nobugsbutton:link {color:black; text-decoration:none}
+.nobugsbutton:visited {color:black; text-decoration:none}
+	
+.newbugbutton {
+	border:none;
+	border-bottom:2px solid black;
+	border-top:2px solid black;
+	border-radius: 5px;
+	height:100%;
+	background: #F7F7F7;
+	font-size:1.5em;
+	width:46%;
+	margin-left:2%;
+	text-decoration:none;
+	}
+
+.newbugbutton:link {color:black; text-decoration:none}
+.newbugbutton:visited {color:black; text-decoration:none}
+
+/* CONTAINER FOR SUBMIT BUTTON (BOTTOM DIV) */
+.sendreport {
+	width: 100%;
+	height:100px;
+	border-top: 2px solid #000000;
+	background:#F7F7F7;
+	}
+	
+#sendreportbutton {
+	border:2px solid black;
+	border-radius: 5px;
+	height:40px;
+	width:44%;
+	background: #D8D8D8;
+	font-size:0.7em;
+	font-weight:bold;
+	margin: 30px 28% 30px 28%;
+	}
+	
+/* COLOR CODING FOR DIFFERENT DEVICES */
+
+.mac-1{
+	background:#00ACBF;
+	}
+	
+.mac-2{
+	background:#00B8CC;
+	}
+	
+.mac-3{
+	background:#00C2D9;;
+	}
+	
+
+.pc-1{
+	background:#019463;
+	}
+	
+.pc-2{
+	background:#02A16C;
+	}
+	
+.pc-3{
+	background:#02AD74;
+	}
+	
+.pc-4{
+	background:#02BA7D;
+	}
+	
+.pc-5{
+	background:#02C785;
+	}
+	
+.pc-6{
+	background:#01D48F;
+	}						
+	
+
+.nexus-1{
+	background:#007D79;
+	}
+	
+.nexus-2{
+	background:#009999;
+	}
+	
+
+.ipad-1{
+	background:#E5B800;
+	}
+	
+.ipad-2{
+	background:#F3C300;
+	}
+
+.ipad2-1{
+	background:#D16900;
+	}
+	
+.ipad2-2{
+	background:#DE6E00;
+	}
+	
+
+.iphone-1{
+	background:#008C9E;
+	}
+	
+.iphone-2{
+	background: #0097AC;
+	}
