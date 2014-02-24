@@ -1,9 +1,4 @@
 <?php
-if ( filter_input(INPUT_POST, 'submit') )
-{
-	die('<pre>' . print_r($_POST) . '</pre>');
-}
-
 $types = array
 (
 	array
@@ -104,7 +99,7 @@ $types = array
 	
 	<body>
 		<div id="wrapper">
-			<form action="/" method="post" id="formyform">
+			<form action="/includes/save.php" method="post" id="formyform">
 				<div class="projecttitle">
 					<input class="title-input" type="text" name="title" value="Project Title">
 				</div>
@@ -113,8 +108,9 @@ $types = array
 					<div class="accordionButton <?= $type['class'] ?>">
 						<h4><?= $type['name'] ?></h4>
 					</div>
+
 					<div class="accordionContent">
-						<?= include 'includes/form.php' ?>
+						<?php include 'includes/form.php' ?>
 					</div>
 				<?php endforeach ?>
 

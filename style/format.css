@@ -47,7 +47,8 @@ body {
 	}
 	
 /* CONTAINER FOR ACCORDION CONTENT */
-.accordionContent {	
+.accordionContent {
+	display: none;
 	width: 100%;
 	background: #B4E6FF;
 	border-bottom: 1px solid #000000;
