@@ -30,7 +30,7 @@ body {
 	height:50px;
 	text-align:center;
 	font-size:2.2em;
-	background-color:#00FF8C;
+	background-color:#999999;
 	padding:0;
 	border: 0px solid #EEC5A9;
 	border-bottom: 2px solid #EEC5A9;
@@ -63,24 +63,8 @@ body {
 	border-bottom: 1px solid #000000;
 	border-top: 1px solid #000000;
 	padding-top:20px;
-	padding-bottom:20px;
+	padding-bottom:50px;
 	}
-
-/* RESIZE PADDING-BOTTOM OF ACCORDION CONTENT */
-
-@media only screen
-and (max-width : 500px) {
-	.accordionContent {
-		padding-bottom:13px;
-	}
-}
-
-@media only screen
-and (max-width : 365px) {
-	.accordionContent {
-		padding-bottom:10px;
-	}
-}
 
 /* CONTAINER FOR 3 TEXT INPUT FORMS AND SAVE BUG BUTTON */
 .inputcontainer {
@@ -98,7 +82,7 @@ and (max-width : 365px) {
 	
 .inputcontainer p {
 	font-family: ‘Raleway’, serif;
-	font-weight: 400;
+	font-weight: 700;
 	margin:0;
 	line-height:2em;
 	font-size:0.9em;
@@ -140,65 +124,69 @@ input[type="text"].small-input {
 	margin:10px auto 0 auto;
 	}
 	
-/* DIV USED TO POSITION "NO MORE BUGS" AND "+ NEW BUG" BUTTONS */
-.bugsbuttoncontainer p {
+/* BUTTONS */
+.accordionContent a {
 	font-family: ‘Raleway’, serif;
-	font-weight: 400;
-	display: inline;
+	font-weight: 700;
+	display: inline-block;
 	font-size: 0.9em;
-	width: 100%;
-	margin-right: 2%;
-	margin-left: 0%;
+}
 
-	}
+.buttonContainer {
+	width:200px;
+	height:100%;
+	margin: 0 auto;
 
-.bugsbuttoncontainer {
+}
+
+.buttonContainer div:first-child {
+	float:left;
+}
+
+.buttonContainer div:nth-child(2) {
+	float:right;
+}
+
+.nobugsbuttondiv {
+	border:none;
+	font-size:0.9em;
+	text-decoration:none;
+	background: #F7F7F7;
 	height:30px;
-	width:80%;
-	max-width:370px;
-	margin:20px auto 0 auto;
-	}
+	width:80px;
+	display:inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	margin: 10px 0;
+}
 
 .nobugsbutton {
-	border:none;
-	height:100%;
-	background: #F7F7F7;
-	font-size:0.9em;
-	width:46%;
-	margin-right:2%;
-	margin-left:11%;
-	text-decoration:none;
-	}
+}
 
 .nobugsbutton:link {color:black; text-decoration:none}
 .nobugsbutton:visited {color:black; text-decoration:none}
 	
-.newbugbutton {
+.newbugbuttondiv {
 	border:none;
-	height:100%;
-	background: #F7F7F7;
 	font-size:0.9em;
-	width:46%;
-	margin-left:2%;
 	text-decoration:none;
-	}
+	background: #F7F7F7;
+	height:30px;
+	width:80px;
+	display:inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	margin: 10px 0;
+}
+
+.newbugbutton {
+}
 
 .newbugbutton:link {color:black; text-decoration:none}
 .newbugbutton:visited {color:black; text-decoration:none}
 
-@media only screen
-and (max-width : 500px) {
-	.nobugsbutton {
-		margin-left:23%;
-	}
-}
-
-@media only screen
-and (max-width : 365px) {
-	.nobugsbutton {
-		margin-left:13%;
-	}
-}
 
 /* CONTAINER FOR SUBMIT BUTTON (BOTTOM DIV) */
 .sendreport {
@@ -209,10 +197,9 @@ and (max-width : 365px) {
 	}
 	
 #sendreportbutton {
-	border:2px solid black;
-	border-radius: 5px;
 	height:40px;
 	width:44%;
+	border: 0;
 	background: #D8D8D8;
 	font-size:0.7em;
 	font-weight:bold;
@@ -222,69 +209,69 @@ and (max-width : 365px) {
 /* COLOR CODING FOR DIFFERENT DEVICES */
 
 .mac-1{
-	background:#f24b27;
+	background:#1df079;
 	}
 	
 .mac-2{
-	background:#cf302a;
+	background:#1de481;
 	}
 	
 .mac-3{
-	background:#d1316d;
+	background:#1dd88a;
 	}
 
 .pc-1{
-	background:#a647a1;
+	background:#1dcc92;
 	}
 	
 .pc-2{
-	background:#693695;
+	background:#1dc09b;
 	}
 	
 .pc-3{
-	background:#37359a;
+	background:#1db4a3;
 	}
 	
 .pc-4{
-	background:#256197;
+	background:#1da8ac;
 	}
 	
 .pc-5{
-	background:#309da2;
+	background:#1d9db4;
 	}
 	
 .pc-6{
-	background:#03aa74;
+	background:#1d91bd;
 	}						
 
 .nexus-1{
-	background:#34a152;
+	background:#1d85c5;
 	}
 	
 .nexus-2{
-	background:#699f49;
+	background:#1d79ce;
 	}
 
 .ipad-1{
-	background:#99cc49;
+	background:#1d6dd6;
 	}
 	
 .ipad-2{
-	background:#cade41;
+	background:#1d61df;
 	}
 
 .ipad2-1{
-	background:#efea44;
+	background:#1d55e7;
 	}
 	
 .ipad2-2{
-	background:#fed142;
+	background:#1d4af0;
 	}
 
 .iphone-1{
-	background:#ffa130;
+	background:#1B46E3;
 	}
 	
 .iphone-2{
-	background: #0097AC;
+	background: #1A41D4;
 	}
