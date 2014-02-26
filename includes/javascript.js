@@ -6,14 +6,19 @@ $(document).ready(function()
 
 	$('.accordionButton').click(function()
 	{
+		//slide
 		$('.accordionButton').removeClass('on');
 		$('.accordionContent').slideUp('normal');
+
+        //whitebackground
         $('.accordionButton').not(this).removeClass('hover1');
         $(this).toggleClass('hover1');
 
+		//headercolorchange
  		var bgcol = $(this).css('backgroundColor');
 		$(this).children('h4').css('color', bgcol);
 
+		//headercolorchangewhite
 		var thish4 = $(this).children('h4');
 		$('h4').not(thish4).css('color', 'white');
 
@@ -22,6 +27,18 @@ $(document).ready(function()
 			$(this).children('h4').css('color', 'white');
 		}
 
+		var plussign = $(this).children('h4.plus');
+		$('.accordionButton').children('h4.plus').not(plussign).html('+');
+
+		if( plussign.html() == '+' )
+        {
+        	plussign.html('-');
+        } else {
+        	plussign.html('+');
+        }
+		console.log(plussign.html());
+
+		//slide
 		if( $(this).next().is(':hidden') === true )
 		{
 			$(this).addClass('on');
