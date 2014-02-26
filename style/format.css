@@ -259,14 +259,15 @@ input[type="text"].small-input {
 #sendreportbutton {
 	font-family: Raleway;
 	font-weight: 400;
-	font-size:1.7em;
+	font-size:1.0em;
 	height:50px;
 	width:80%;
+	max-width:300px;
 	border:0;
 	background: #D8D8D8;
-	margin: 25px 10% 30px 10%;
+	margin: 37px auto 30px auto;
 	padding:2px;
-	display:inline-block;
+	display:block;
 }
 
 /* COLOR CODING FOR DIFFERENT DEVICES */
