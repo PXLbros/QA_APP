@@ -26,7 +26,7 @@ $(document).ready(function()
 		{
 			$(this).children('h4').css('color', 'white');
 		}
-
+		//plusminus
 		var plussign = $(this).children('h4.plus');
 		$('.accordionButton').children('h4.plus').not(plussign).html('+');
 
@@ -37,6 +37,7 @@ $(document).ready(function()
         	plussign.html('+');
         }
 		console.log(plussign.html());
+		//borderbottom
 
 		//slide
 		if( $(this).next().is(':hidden') === true )

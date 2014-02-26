@@ -259,84 +259,103 @@ input[type="text"].small-input {
 	font-family: Raleway;
 	font-weight: 400;
 	font-size:1.7em;
-	height:40px;
-	width:44%;
-	border: 0;
+	height:50px;
+	width:80%;
+	border:0;
 	background: #D8D8D8;
-	margin: 30px 28% 30px 28%;
+	margin: 25px 10% 30px 10%;
+	padding:2px;
+	display:inline-block;
 }
 
 /* COLOR CODING FOR DIFFERENT DEVICES */
 
 .mac-1{
 	background:#1df079;
+	border-bottom:1px solid #1df079;
 }
 
 .mac-2{
 	background:#1de481;
+	border-bottom:1px solid #1de481;
 }
 
 .mac-3{
 	background:#1dd88a;
+	border-bottom:1px solid #1dd88a;
 }
 
 .pc-1{
 	background:#1dcc92;
+	border-bottom:1px solid #1dcc92;
 	border-top:solid 5px white;
 }
 
 .pc-2{
 	background:#1dc09b;
+	border-bottom:1px solid #1dc09b;
 }
 
 .pc-3{
 	background:#1db4a3;
+	border-bottom:1px solid #1db4a3;
 }
 
 .pc-4{
 	background:#1da8ac;
+	border-bottom:1px solid #1da8ac;
 }
 
 .pc-5{
 	background:#1d9db4;
+	border-bottom:1px solid #1d9db4;
 }
 
 .pc-6{
 	background:#1d91bd;
+	border-bottom:1px solid #1d91bd;
 }
 
 .nexus-1{
 	background:#1d85c5;
+	border-bottom:1px solid #1d85c5;
 	border-top:solid 5px white;
 }
 
 .nexus-2{
 	background:#1d79ce;
+	border-bottom:1px solid #1d79ce;
 }
 
 .ipad-1{
 	background:#1d6dd6;
+	border-bottom:1px solid #1d6dd6;
 	border-top:solid 5px white;
 }
 
 .ipad-2{
 	background:#1d61df;
+	border-bottom:1px solid #1d61df;
 }
 
 .ipad2-1{
 	background:#1d55e7;
+	border-bottom:1px solid #1d55e7;
 	border-top:solid 5px white;
 }
 
 .ipad2-2{
 	background:#1d4af0;
+	border-bottom:1px solid #1d4af0;
 }
 
 .iphone-1{
 	background:#1B46E3;
+	border-bottom:1px solid #1B46E3;
 	border-top:solid 5px white;
 }
 
 .iphone-2{
 	background: #1A41D4;
+	border-bottom:1px solid #1A41D4;
 }
