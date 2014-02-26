@@ -9,90 +9,127 @@ DESCRIPTION: This document contains the structural formatting files for the acco
 ************************************************************************************************************************/
 body {
 	margin:0;
-	}
+}
 
 #wrapper {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	}
-	
+}
+
 /* PROJECT TITLE DIV */
 .projecttitle {
 	width: 100%;
-	height:50px;
-	}
-	
+	height:100px;
+}
+
 /* PROJECT TITLE INPUT - SHOULD BECOME NAME OF PROJECT AFTER BEING INPUT */
-.title-input {
+.projecttitle .title-input {
 	color:#FFFFFF;
 	width:100%;
-	height:50px;
+	height:100px;
 	text-align:center;
-	font-size:2.2em;
-	background-color:#999999;
+	font-size:2.0em;
+	font-weight:700;
+	background-color:#494949;
 	padding:0;
 	border: 0px solid #EEC5A9;
 	border-bottom: 2px solid #EEC5A9;
-	}
+}
 
 /* EVERY SINGLE BUTTON */
 .accordionButton {
-	color:white;	
 	width: 100%;
-	height:50px;
-	/* border-top: 1px solid #EEC5A9; */
+	height:75px;
 	cursor: pointer;
 	text-align:center;
 	padding-left:0px;
 	display:inline-block;
-	}
+	transition: background-color 1.0s;
+	-moz-transition: background-color 1.0s;
+	-webkit-transition: background-color 1.0s;
+	-o-transition: background-color 1.0s;
+}
 
 .accordionButton h4 {
-	font-family: ‘Raleway’, serif;
+	font-family: Raleway;
 	font-weight: 400;
-	text-align: left;
+	color:white;
+	text-align:left;
 	text-indent: 10%;
+	vertical-align:middle;
+	margin-top:29px;
+	float:left;
+	width:70%;
 }
-	
+
+.accordionButton h4.plus{
+	margin-top:23px;
+	font-size:1.8em;
+	text-align:left;
+	float:right;
+	text-indent:0;
+	width:8%;
+}
+
+
+
+
+/* DIVIDER */
+/* .divider {
+	height:30px;
+	background-color:#494949;
+	width:100%;
+} */
+
 /* CONTAINER FOR ACCORDION CONTENT */
 .accordionContent {
 	display: none;
 	width: 100%;
-	background: #B4E6FF;
-	border-bottom: 1px solid #000000;
-	border-top: 1px solid #000000;
+	border-bottom: 0;
+	border-top: 0;
 	padding-top:20px;
-	padding-bottom:50px;
-	}
+	padding-bottom:67px;
+	transition: background-color 1.0s;
+	-moz-transition: background-color 1.0s;
+	-webkit-transition: background-color 1.0s;
+	-o-transition: background-color 1.0s;
+}
+
+/*COLOR TRANSITIONS*/
+.accordionContent.hover1 {
+	background-color: white;
+}
+.accordionButton.hover1 {
+	background-color: white;
+}
 
 /* CONTAINER FOR 3 TEXT INPUT FORMS AND SAVE BUG BUTTON */
 .inputcontainer {
 	width:80%;
 	height:60%;
-	border-bottom: 2px solid #7C7C7C;
-	background: #FFFFFF;
 	padding-top:10px;
 	padding-bottom:10px;
 	margin-left:auto;
 	margin-right:auto;
 	padding-left:10px;
 	padding-right:10px;
-	}
-	
+}
+
 .inputcontainer p {
-	font-family: ‘Raleway’, serif;
-	font-weight: 700;
+	font-family: Raleway;
+	font-weight: 400;
 	margin:0;
 	line-height:2em;
 	font-size:0.9em;
-	}
-	
+	color: black;
+}
+
 /* STYLES THE TEXT-INPUT BOXES INCLUDING TITLE */
 input[type="text"]
 {
-	font-family: ‘Raleway’, serif;
-	font-weight: 700;
+	font-family: Raleway;
+	font-weight: 400;
 }
 
 input[type="text"].small-input {
@@ -102,41 +139,60 @@ input[type="text"].small-input {
 .small-input {
 	width:99%;
 	border:none;
-	background: #F7F7F7;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	background: white;
 	line-height:1.5em;
-	}
-	
+}
+
+.small-input:focus {
+	outline: none;
+}
+
 .large-input {
+	font-family: Raleway;
+	font-weight: 400;
 	width:99%;
 	max-width:99%;
 	min-width:99%;
 	max-height:300px;
 	border:none;
-	background: #F7F7F7;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	background: white;
 	padding:1px;
-	}
-	
+}
+
+.large-input:focus {
+	outline: none;
+}
+
 /* DIV USED TO POSITION "SAVE BUG" BUTTON */
 .savebuttoncontainer {
 	height:30px;
 	width:33%;
 	max-width:175px;
 	margin:10px auto 0 auto;
-	}
-	
+}
+
 /* BUTTONS */
 .accordionContent a {
-	font-family: ‘Raleway’, serif;
-	font-weight: 700;
+	font-family: Raleway;
+	font-weight: 400;
 	display: inline-block;
 	font-size: 0.9em;
 }
 
 .buttonContainer {
-	width:200px;
+	width:300px;
 	height:100%;
 	margin: 0 auto;
+}
 
+@media (max-width:400px) {
+	.buttonContainer {
+		width:230px;
+	}
 }
 
 .buttonContainer div:first-child {
@@ -151,14 +207,16 @@ input[type="text"].small-input {
 	border:none;
 	font-size:0.9em;
 	text-decoration:none;
-	background: #F7F7F7;
+	background: white;
 	height:30px;
-	width:80px;
+	width:88px;
 	display:inline-block;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 30px;
-	margin: 10px 0;
+	margin: 5px 0 0 0;
+	padding:7px;
+	background-color: #D8D8D8;
 }
 
 .nobugsbutton {
@@ -166,19 +224,21 @@ input[type="text"].small-input {
 
 .nobugsbutton:link {color:black; text-decoration:none}
 .nobugsbutton:visited {color:black; text-decoration:none}
-	
+
 .newbugbuttondiv {
 	border:none;
 	font-size:0.9em;
 	text-decoration:none;
-	background: #F7F7F7;
+	background: white;
 	height:30px;
-	width:80px;
+	width:88px;
 	display:inline-block;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 30px;
-	margin: 10px 0;
+	margin: 5px 0 0 0;
+	padding:7px;
+	background-color: #D8D8D8;
 }
 
 .newbugbutton {
@@ -192,86 +252,91 @@ input[type="text"].small-input {
 .sendreport {
 	width: 100%;
 	height:100px;
-	border-top: 2px solid #000000;
-	background:#F7F7F7;
-	}
-	
+	background:white;
+}
+
 #sendreportbutton {
+	font-family: Raleway;
+	font-weight: 400;
+	font-size:1.7em;
 	height:40px;
 	width:44%;
 	border: 0;
 	background: #D8D8D8;
-	font-size:0.7em;
-	font-weight:bold;
 	margin: 30px 28% 30px 28%;
-	}
-	
+}
+
 /* COLOR CODING FOR DIFFERENT DEVICES */
 
 .mac-1{
 	background:#1df079;
-	}
-	
+}
+
 .mac-2{
 	background:#1de481;
-	}
-	
+}
+
 .mac-3{
 	background:#1dd88a;
-	}
+}
 
 .pc-1{
 	background:#1dcc92;
-	}
-	
+	border-top:solid 5px white;
+}
+
 .pc-2{
 	background:#1dc09b;
-	}
-	
+}
+
 .pc-3{
 	background:#1db4a3;
-	}
-	
+}
+
 .pc-4{
 	background:#1da8ac;
-	}
-	
+}
+
 .pc-5{
 	background:#1d9db4;
-	}
-	
+}
+
 .pc-6{
 	background:#1d91bd;
-	}						
+}
 
 .nexus-1{
 	background:#1d85c5;
-	}
-	
+	border-top:solid 5px white;
+}
+
 .nexus-2{
 	background:#1d79ce;
-	}
+}
 
 .ipad-1{
 	background:#1d6dd6;
-	}
-	
+	border-top:solid 5px white;
+}
+
 .ipad-2{
 	background:#1d61df;
-	}
+}
 
 .ipad2-1{
 	background:#1d55e7;
-	}
-	
+	border-top:solid 5px white;
+}
+
 .ipad2-2{
 	background:#1d4af0;
-	}
+}
 
 .iphone-1{
 	background:#1B46E3;
-	}
-	
+	border-top:solid 5px white;
+}
+
 .iphone-2{
 	background: #1A41D4;
-	}
+}

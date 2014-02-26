@@ -109,6 +109,7 @@ $types = array
 				<?php foreach ( $types as $index => $type ): ?>
 					<div class="accordionButton <?= $type['class'] ?>">
 						<h4><?= $type['name'] ?></h4>
+						<h4 class="plus">+</h4>
 					</div>
 
 					<div class="accordionContent">

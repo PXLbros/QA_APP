@@ -8,6 +8,19 @@ $(document).ready(function()
 	{
 		$('.accordionButton').removeClass('on');
 		$('.accordionContent').slideUp('normal');
+        $('.accordionButton').not(this).removeClass('hover1');
+        $(this).toggleClass('hover1');
+
+ 		var bgcol = $(this).css('backgroundColor');
+		$(this).children('h4').css('color', bgcol);
+
+		var thish4 = $(this).children('h4');
+		$('h4').not(thish4).css('color', 'white');
+
+		if( $(this).children('h4').css('color', bgcol) === true )
+		{
+			$(this).children('h4').css('color', 'white');
+		}
 
 		if( $(this).next().is(':hidden') === true )
 		{
