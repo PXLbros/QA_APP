@@ -44,7 +44,7 @@ body {
 	cursor: pointer;
 	text-align:center;
 	padding-left:0px;
-	display:inline-block;
+	display:block;
 	transition: background-color 1.0s;
 	-moz-transition: background-color 1.0s;
 	-webkit-transition: background-color 1.0s;
