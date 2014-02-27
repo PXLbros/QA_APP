@@ -36,7 +36,7 @@ $(document).ready(function()
         } else {
         	plussign.html('+');
         }
-		console.log(plussign.html());
+
 		//borderbottom
 
 		//slide
@@ -56,6 +56,7 @@ $(document).ready(function()
 		$('html, body').animate({ scrollTop: $(document).height() }, 1000);
 	});
 
+	// Add new bug
 	$form.find('.newbugbutton').on('click', function()
 	{
 		var index = $(this).data('index'),
@@ -66,23 +67,8 @@ $(document).ready(function()
 			description = $description.val(),
 			steps_to_reproduce = $steps_to_reproduce.val();
 
-		var $page_hidden = document.createElement('input');
-		$page_hidden.type = 'hidden';
-		$page_hidden.name = 'page[' + index + '][]';
-		$page_hidden.value = page;
-		$form.prepend($page_hidden);
-
-		var $description_hidden = document.createElement('input');
-		$description_hidden.type = 'hidden';
-		$description_hidden.name = 'description[' + index + '][]';
-		$description_hidden.value = description;
-		$form.prepend($description_hidden);
-
-		var $steps_to_reproduce_hidden = document.createElement('input');
-		$steps_to_reproduce_hidden.type = 'hidden';
-		$steps_to_reproduce_hidden.name = 'steps_to_reproduce[' + index + '][]';
-		$steps_to_reproduce_hidden.value = steps_to_reproduce;
-		$form.prepend($steps_to_reproduce_hidden);
+		// Add
+		add_bug(index, page, description, steps_to_reproduce);
 
 		// Clear form
 		$page.val('');
@@ -94,4 +80,116 @@ $(document).ready(function()
     {
     	console.log('TEST');
     });
+
+    $form.submit(function()
+	{
+		// Check if title is filled out
+		if ( $('#project_title').val() === '' )
+		{
+			alert('Enter project title!');
+
+			return false;
+		}
+
+		// Loop through all types and see if there are any fields filled out
+		$('.inputcontainer').find('.page-input').each(function(index, element)
+		{
+			var $page = $(this),
+				page = $page.val(),
+				index = $page.data('index'),
+				$description = $('#description_' + index),
+				description = $description.val(),
+				$steps_to_reproduce = $('#steps_to_reproduce_' + index),
+				steps_to_reproduce = $steps_to_reproduce.val();
+
+			// If any of the fields are filled out, add
+			if ( page !== '' || description !== '' || steps_to_reproduce !== '' )
+			{
+				// Add
+				add_bug(index, page, description, steps_to_reproduce);
+			}
+		});
+
+		var original_send_report_button_text = $('#sendreportbutton').val();
+
+		$('#sendreportbutton').val('Submitting Report...').prop('disabled', true);
+
+		$.ajax(
+		{
+			url: '/send.php',
+			data: $form.serialize(),
+			type: 'POST',
+			dataType: 'json'
+		}).done(function(result)
+		{
+			if ( result.error === '' ) // All good
+			{
+				alert('Sent!');
+
+				clear_form();
+			}
+			else
+			{
+				alert(result.error);
+			}
+		}).always(function()
+		{
+			$('#sendreportbutton').val(original_send_report_button_text).prop('disabled', false);
+		});
+
+		return false;
+	});
 });
+
+$(window).keydown(function(e)
+{
+	// If on textarea, allow enter
+	if ( $('textarea:focus').length === 1 )
+	{
+		return;
+	}
+
+	// Disable submit on enter
+	if ( e.keyCode === 13 )
+	{
+		e.preventDefault();
+
+		return false;
+	}
+});
+
+function add_bug(index, page, description, steps_to_reproduce)
+{
+	var $page_hidden = document.createElement('input');
+	$page_hidden.type = 'hidden';
+	$page_hidden.name = 'page[' + index + '][]';
+	$page_hidden.value = page;
+	$page_hidden.className = 'bug-input';
+	$form.prepend($page_hidden);
+
+	var $description_hidden = document.createElement('input');
+	$description_hidden.type = 'hidden';
+	$description_hidden.name = 'description[' + index + '][]';
+	$description_hidden.value = description;
+	$description_hidden.className = 'bug-input';
+	$form.prepend($description_hidden);
+
+	var $steps_to_reproduce_hidden = document.createElement('input');
+	$steps_to_reproduce_hidden.type = 'hidden';
+	$steps_to_reproduce_hidden.name = 'steps_to_reproduce[' + index + '][]';
+	$steps_to_reproduce_hidden.value = steps_to_reproduce;
+	$steps_to_reproduce_hidden.className = 'bug-input';
+	$form.prepend($steps_to_reproduce_hidden);
+}
+
+function clear_form()
+{
+	// Clear all fields
+	$('.page-input, .description-input, .steps-to-reproduce-input').val('');
+
+	// Remove previously added bugs
+	$('.bug-input').remove();
+
+	// Close open accordion
+	// ...
+}
