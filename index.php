@@ -21,13 +21,15 @@ include 'init.php';
 				</div>
 
 				<?php foreach ( $types as $index => $type ): ?>
-					<div class="accordionButton <?= $type['class'] ?>">
-						<h4><?= $type['name'] ?></h4>
-						<h4 class="plus">+</h4>
-					</div>
+					<div style="clear:both">
+						<div class="accordionButton <?= $type['class'] ?>">
+							<h4><?= $type['name'] ?></h4>
+							<h4 class="plus">+</h4>
+						</div>
 
-					<div class="accordionContent">
-						<?php include 'includes/form.php' ?>
+						<div class="accordionContent">
+							<?php include 'includes/form.php' ?>
+						</div>
 					</div>
 				<?php endforeach ?>
 

@@ -191,5 +191,25 @@ function clear_form()
 	$('.bug-input').remove();
 
 	// Close open accordion
-	// ...
+	close_the_open_accordion();
+}
+
+function close_the_open_accordion()
+{
+	var $accordion_button = $('.accordionButton.on');
+
+	// No open accordion, abort
+	if ( $accordion_button.length === 0 )
+	{
+		return;
+	}
+
+	var $accordion_content = $accordion_button.next('.accordionContent');
+
+	$accordion_button.removeClass('on hover1');
+	$accordion_content.slideUp('normal');
+
+	var background_color = $accordion_button.css('backgroundColor');
+
+	$accordion_button.find('h4').css('color', '#FFF');
 }
